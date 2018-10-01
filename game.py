@@ -21,6 +21,6 @@ print("player X, what's your first move?")
 move=input()
 
 def placement (move):
-    if move[0]=='A':
-        print (board[0,0])
+    #if move[0]=='A':
+        print move[0]
 
