@@ -1,7 +1,7 @@
 
 ##this is tic tac toe
 
-
+player='X'
 board=[['*','A','B','C'], [1,'_','_','_'],[2,'_','_','_'],[3,'_','_','_']]
         
 def view(board):
@@ -38,14 +38,18 @@ def placement(move, player):
     x=xplacement(move)
     board[x][y]=player
     view(board)
-    changeplayer(player)
+    changeplayer()
+    
 
-def changeplayer(player):
+def changeplayer():
+    global player
     if player=='X':
         player='O'
+    else: player='X'
     return player
 
 def game():
+    global player
     player='X'
     for i in range (10):
         move=input("\n"+"player " +player+", what's your move?"+"\n")
